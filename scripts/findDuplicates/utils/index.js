@@ -21,7 +21,7 @@ import path from "path";
 export async function generateConfigs() {
   try {
     const inputFile = path.resolve('input', 'updateIndex.failure.json')  
-    const outputFile = path.resolve('output', 'duplicaties_json', 'duplicateKeys.json')  
+    const outputFile = path.resolve('output', 'duplicates_json', 'duplicateKeys.json')  
 
     const content = await fs.readFile(inputFile, "utf8");
     const data = JSON.parse(content);
