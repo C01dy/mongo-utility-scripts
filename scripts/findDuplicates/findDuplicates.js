@@ -2,6 +2,7 @@
 import { MongoClient } from "mongodb";
 import fs from "fs/promises";
 import { config as dotenvConfig } from "dotenv";
+import { generateConfigs } from "./utils"
 
 // Загружаем переменные окружения из файла config/.env
 dotenvConfig({ path: "config/.env" });
@@ -10,7 +11,7 @@ dotenvConfig({ path: "config/.env" });
  * Чтение конфигурационного JSON-файла с настройками для поиска дубликатов.
  * Файл должен располагаться в папке config/
  */
-async function loadConfigs(configFile = "config/configs.json") {
+async function loadConfigs(configFile = "output/duplicateKeys.json") {
   try {
     const data = await fs.readFile(configFile, "utf8");
     return JSON.parse(data);
@@ -93,7 +94,10 @@ async function findDuplicates(configs, { uri, dbName }) {
   const uri = process.env.DB_URI || "mongodb://localhost:27017";
   const dbName = process.env.DB_NAME || "your_database_name";
 
-  // Загружаем конфигурацию для поиска дубликатов из файла config/configs.json
+  // Генерируем файл configs из updateIndex.failure.json
+  await generateConfigs()
+
+  // Загружаем конфигурацию для поиска дубликатов из файла output/duplicateKeys.json
   const configs = await loadConfigs();
 
   // Выполняем поиск дубликатов

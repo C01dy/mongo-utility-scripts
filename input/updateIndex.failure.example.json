@@ -1,0 +1,190 @@
+{
+  "application.things.user": {
+    "email_1": {
+      "index": [
+        {
+          "email": 1
+        },
+        {
+          "unique": true,
+          "background": false,
+          "_autoIndex": false
+        }
+      ],
+      "model": "Application.User",
+      "status": "fail",
+      "err": {
+        "errorResponse": {
+          "ok": 0,
+          "errmsg": "Index build failed: 7915af60-fc2b-4f5a-a83b-0e33b34b65cb: Collection full.application.things.user ( a39f6a4c-3e5c-42b6-a283-f79d9106a6b7 ) :: caused by :: E11000 duplicate key error collection: full.application.things.user index: email_1 dup key: { email: \"????? ??????\" }",
+          "code": 11000,
+          "codeName": "DuplicateKey",
+          "keyPattern": {
+            "email": 1
+          },
+          "keyValue": {
+            "email": "????? ??????"
+          },
+          "$clusterTime": {
+            "clusterTime": {
+              "$timestamp": "7469002429015523371"
+            },
+            "signature": {
+              "hash": "dTw4F1doG/sS15VomCZXL9rYhjI=",
+              "keyId": {
+                "low": 7,
+                "high": 1732863772,
+                "unsigned": false
+              }
+            }
+          },
+          "operationTime": {
+            "$timestamp": "7469002429015523371"
+          }
+        },
+        "ok": 0,
+        "code": 11000,
+        "codeName": "DuplicateKey",
+        "keyPattern": {
+          "email": 1
+        },
+        "keyValue": {
+          "email": "????? ??????"
+        },
+        "$clusterTime": {
+          "clusterTime": {
+            "$timestamp": "7469002429015523371"
+          },
+          "signature": {
+            "hash": "dTw4F1doG/sS15VomCZXL9rYhjI=",
+            "keyId": {
+              "low": 7,
+              "high": 1732863772,
+              "unsigned": false
+            }
+          }
+        },
+        "operationTime": {
+          "$timestamp": "7469002429015523371"
+        }
+      },
+      "message": "Index build failed: 7915af60-fc2b-4f5a-a83b-0e33b34b65cb: Collection full.application.things.user ( a39f6a4c-3e5c-42b6-a283-f79d9106a6b7 ) :: caused by :: E11000 duplicate key error collection: full.application.things.user index: email_1 dup key: { email: \"????? ??????\" }"
+    }
+  },
+  "sharan.things.clientsservices": {
+    "welcomeEmailCreator_1": {
+      "index": [
+        {
+          "welcomeEmailCreator": 1
+        },
+        {
+          "background": false,
+          "_autoIndex": false
+        }
+      ],
+      "model": "Sharan.ClientsServices",
+      "status": "fail",
+      "err": {
+        "errorResponse": {
+          "ok": 0,
+          "errmsg": "add index fails, too many indexes for full.sharan.things.clientsservices key:{ welcomeEmailCreator: 1 }",
+          "code": 67,
+          "codeName": "CannotCreateIndex",
+          "$clusterTime": {
+            "clusterTime": {
+              "$timestamp": "7469002665238724616"
+            },
+            "signature": {
+              "hash": "7XrKKyURRrbhOsV/eF3kRVz4Z8Q=",
+              "keyId": {
+                "low": 7,
+                "high": 1732863772,
+                "unsigned": false
+              }
+            }
+          },
+          "operationTime": {
+            "$timestamp": "7469002665238724616"
+          }
+        },
+        "ok": 0,
+        "code": 67,
+        "codeName": "CannotCreateIndex",
+        "$clusterTime": {
+          "clusterTime": {
+            "$timestamp": "7469002665238724616"
+          },
+          "signature": {
+            "hash": "7XrKKyURRrbhOsV/eF3kRVz4Z8Q=",
+            "keyId": {
+              "low": 7,
+              "high": 1732863772,
+              "unsigned": false
+            }
+          }
+        },
+        "operationTime": {
+          "$timestamp": "7469002665238724616"
+        }
+      },
+      "message": "add index fails, too many indexes for full.sharan.things.clientsservices key:{ welcomeEmailCreator: 1 }"
+    },
+    "welcomeEmailDate_1": {
+      "index": [
+        {
+          "welcomeEmailDate": 1
+        },
+        {
+          "background": false,
+          "_autoIndex": false
+        }
+      ],
+      "model": "Sharan.ClientsServices",
+      "status": "fail",
+      "err": {
+        "errorResponse": {
+          "ok": 0,
+          "errmsg": "add index fails, too many indexes for full.sharan.things.clientsservices key:{ welcomeEmailDate: 1 }",
+          "code": 67,
+          "codeName": "CannotCreateIndex",
+          "$clusterTime": {
+            "clusterTime": {
+              "$timestamp": "7469002665238724616"
+            },
+            "signature": {
+              "hash": "7XrKKyURRrbhOsV/eF3kRVz4Z8Q=",
+              "keyId": {
+                "low": 7,
+                "high": 1732863772,
+                "unsigned": false
+              }
+            }
+          },
+          "operationTime": {
+            "$timestamp": "7469002665238724616"
+          }
+        },
+        "ok": 0,
+        "code": 67,
+        "codeName": "CannotCreateIndex",
+        "$clusterTime": {
+          "clusterTime": {
+            "$timestamp": "7469002665238724616"
+          },
+          "signature": {
+            "hash": "7XrKKyURRrbhOsV/eF3kRVz4Z8Q=",
+            "keyId": {
+              "low": 7,
+              "high": 1732863772,
+              "unsigned": false
+            }
+          }
+        },
+        "operationTime": {
+          "$timestamp": "7469002665238724616"
+        }
+      },
+      "message": "add index fails, too many indexes for full.sharan.things.clientsservices key:{ welcomeEmailDate: 1 }"
+    }
+  }
+}
