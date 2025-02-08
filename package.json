@@ -2,7 +2,7 @@
   "name": "mongo-utility-scripts",
   "type": "module",
   "scripts": {
-    "findDuplicates": "bun run scripts/findDuplicates.js",
+    "findDuplicates": "bun run scripts/findDuplicates/findDuplicates.js",
     "findIndexes": "bun run scripts/findIndexes.js"
   },
   "devDependencies": {
